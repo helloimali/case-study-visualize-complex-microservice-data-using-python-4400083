@@ -1,4 +1,5 @@
 import json
+import plantuml
 
 def load_data():
   with open("./profile_service_response.json", encoding="utf-8") as profile_file:
@@ -43,7 +44,12 @@ def write_plantuml_file(context):
 
     pf.write("@enduml \n")
 
+def create_plantuml_img():
+  plantuml.PlantUML("http://plantuml.com/plantuml/img/").processes_file("plantuml.txt", outfile=None, errorfile="None")
+
 if __name__ == '__main__':
   context_json = load_data()
   print(context_json)
   write_plantuml_file(context_json)
+  create_plantuml_img()
+  
