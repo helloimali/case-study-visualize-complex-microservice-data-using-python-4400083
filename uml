@@ -1,0 +1,26 @@
+@startuml
+object blondiebytes
+blondiebytes : name = Kathryn
+blondiebytes : biography = Software Engineer
+blondiebytes : hyperlink = "linktr.ee/blondiebytes"
+blondiebytes : is_reported = true
+blondiebytes : is_shadowbanned = false
+blondiebytes : number_of_followers = 29058
+blondiebytes : number_of_posts = 541
+blondiebytes : number_of_following = 692
+
+object post_1224
+post_1224 : post_caption = Never use C in the spring - instead spring into spring with spring
+post_1224 : images = [bit.ly/304gDIV, bit.ly/3zRs8wQ]
+post_1224 : number_of_likes = 320
+post_1224 : hashtags = [springboot, java, springframework]
+post_1224 : date_published = 2023-03-20 16: 34: 04.862380
+post_1224 : is_reported = true
+post_1224 : is_manual = true
+post_1224 : reason = Represented duplicate content from another account
+post_1224 : reported_by : browniebits
+post_1224 : comment_sarahjohnson : I love spring boot
+
+blondiebytes -down-> post_1224
+
+@enduml
