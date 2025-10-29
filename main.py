@@ -39,8 +39,16 @@ def write_plantuml_file(context):
     pf.write("@startuml \n")
     # object nameOfNode
     pf.write("object " +context["username"] + "\n")
+    # nameOfNode : nameOfAttribute = attributeValue
+    pf.write(context["username"] + " : name = " + str(context["name"]) + "\n")
+    pf.write(context["username"] + " : biography = " + str(context["biography"]) + "\n")
+
     for post in context["posts"]:
       pf.write("object post_" + str(post["post_id"]) + "\n")
+      pf.write("post_" + str(post["post_id"]) + " : post_caption = " + post["post_caption"] + "\n")
+
+      # nameOfNodeOne -> nameOfNodeTwo
+      pf.write(context["username"] + "-down->" + "post_" + str(post["post_id"]) + "\n")
 
     pf.write("@enduml \n")
 
@@ -52,4 +60,3 @@ if __name__ == '__main__':
   print(context_json)
   write_plantuml_file(context_json)
   create_plantuml_img()
-  

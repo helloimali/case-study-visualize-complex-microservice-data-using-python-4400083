@@ -1,4 +1,8 @@
 @startuml 
 object blondiebytes
+blondiebytes : name = Kathryn
+blondiebytes : biography = Software Engineer
 object post_1224
+post_1224 : post_caption = Never use C in the spring - instead spring into spring with spring boot
+blondiebytes-down->post_1224
 @enduml 
