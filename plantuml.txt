@@ -1,0 +1,6 @@
+@startuml 
+object Agustín_Chavarría 
+Agustín_Chavarría : email = agustin.chavarria@example.com
+Agustín_Chavarría : phone = (619) 642 1003
+Agustín_Chavarría : age = 75
+@enduml 
